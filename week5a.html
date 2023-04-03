@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GitHub Repositories</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<label for="username">Enter GitHub username:</label>
+	<input type="text" id="username">
+	<button id="search">Search</button>
+	<ul id="repositories"></ul>
+
+	<script>
+		$(document).ready(function() {
+			$("#search").click(function() {
+				var username = $("#username").val();
+				$.getJSON(`https://api.github.com/users/${username}/repos`, function(data) {
+					$("#repositories").empty();
+					$.each(data, function(i, item) {
+						var li = $("<li>").html(`<a href="${item.html_url}">${item.name}</a> - ${item.description}`);
+						$("#repositories").append(li);
+					});
+				});
+			});
+		});
+	</script>
+</body>
+</html>

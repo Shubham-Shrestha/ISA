@@ -1,0 +1,88 @@
+/* Style for search box container */
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  /* Style for search box label */
+  form label {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  /* Style for search box input */
+  form input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #ddd;
+    outline: none;
+  }
+  
+  /* Style for search box submit button */
+  form button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style for search box submit button on hover */
+  form button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+/* Style for movie info */
+#movie-info {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for movie title */
+  #movie-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style for movie poster */
+  #movie-info img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Style for movie details */
+  #movie-info ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  /* Style for movie detail items */
+  #movie-info li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+  }
+  
+  /* Style for movie detail labels */
+  #movie-info li strong {
+    display: inline-block;
+    width: 80px;
+    font-weight: bold;
+  }
+  
+  /* Style for movie plot */
+  #movie-info p {
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+    
