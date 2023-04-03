@@ -3,11 +3,102 @@
 <head>
 	<title>GitHub Repositories</title>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			color: #1e88e5;
+			text-align: center;
+			margin: 40px 0 20px 0;
+		}
+
+		form {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 20px;
+		}
+
+		label {
+			color: #1e88e5;
+			font-weight: bold;
+			margin-right: 10px;
+		}
+
+		input[type="text"] {
+			padding: 10px;
+			border: 2px solid #1e88e5;
+			border-radius: 5px;
+			font-size: 16px;
+			flex-grow: 1;
+			max-width: 400px;
+			min-width: 200px;
+		}
+
+		button {
+			background-color: #1e88e5;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+			margin-left: 10px;
+		}
+
+		button:hover {
+			background-color: #1565c0;
+		}
+
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+
+		li {
+			background-color: #fff;
+			padding: 10px;
+			border-radius: 5px;
+			box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+			margin: 10px;
+			max-width: 400px;
+			min-width: 200px;
+			flex-grow: 1;
+		}
+
+		li:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+		}
+
+		a {
+			color: #1e88e5;
+			font-weight: bold;
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+	</style>
 </head>
 <body>
-	<label for="username">Enter GitHub username:</label>
-	<input type="text" id="username">
-	<button id="search">Search</button>
+	<h1>GitHub Repositories</h1>
+	<form>
+		<label for="username">Enter GitHub username:</label>
+		<input type="text" id="username" placeholder="e.g., octocat">
+		<button id="search" type="button">Search</button>
+	</form>
 	<ul id="repositories"></ul>
 
 	<script>
